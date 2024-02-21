@@ -1,12 +1,13 @@
 version: "3"
 
 services:
-  mercadopago:
+  mercadolivre-exemplo:
     image: php:8.1-apache
     ports:
       - "80:80"
+      - "443:443"
     volumes:
-      - ./:/mercadopago
+      - ./:/var/www/html
     networks:
       - mynetwork
     environment:
