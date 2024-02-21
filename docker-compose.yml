@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  mercadopago:
+    image: php:8.1-apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/mercadopago
+    networks:
+      - mynetwork
+    environment:
+      - teste=1
+
+networks:
+  mynetwork:
+    external: true
